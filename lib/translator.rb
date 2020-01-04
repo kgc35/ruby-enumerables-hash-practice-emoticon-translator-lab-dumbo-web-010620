@@ -5,8 +5,8 @@ def load_library(file_path)
   result = YAML.load_file(file_path)
   final_hash = {}
   #print result
-  final_hash[:get_meaning] = result.keys;
-  final_hash[:get_emoticon] = result.values;
+  final_hash[:get_meaning] = result.keys.to_h;
+  final_hash[:get_emoticon] = result.values.to_h;
   final_hash
 end
 
